@@ -4,41 +4,116 @@ body {
 }
 
 .container-fluid {
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgb(220, 240, 250);
 }
 
 .custom-card {
-    background-color: #bee0f6; /* White card */
+    background-image: url(bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-width: 500px;
+    color: #3C8CB4;
 }
 
 h1 {
-    color: #ff69b4; /* Hot pink color, common for baby themes */
+    color: #3C8CB4; /* Hot pink color, common for baby themes */
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif; /* Or 'Varela Round', 'Cabin' */
+    color: #3C8CB4; /* Darker Blue */
+    font-size: 2.5em; /* Adjust as needed */
     font-weight: bold;
 }
 
 .card-text {
-    color: #6c757d;
+    font-family: 'Open Sans', sans-serif; /* Or 'Lato', 'Roboto' */
+    color: #646464; /* Soft Gray */
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.arabic-text {
+    font-family: 'Noto Naskh Arabic', serif; /* Or 'Harmattan' */
+    color: #3C8CB4; /* Darker Blue */
+    font-size: 1.5em; /* Adjust as needed */
 }
 
 .form-label {
-    color: #495057;
-    font-weight: 500;
+    font-family: 'Open Sans', sans-serif; /* Consistent with body */
+    color: #464646; /* Slightly darker gray */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(100, 100, 100, 0.6); /* Lighter version of soft gray */
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF; /* White */
     font-weight: bold;
+    font-size: 1.2em;
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
+}
+
+/* --- ICON STYLING --- */
+.input-group-text {
+    background-color: #e0f2ff; /* Very light blue to match card */
+    border-right: none;
+    color: #3C8CB4; /* Darker Blue */
+}
+
+/* Make icons match your header color */
+.blue-icon { color: #3C8CB4; }
+.yellow-icon { color: #ffc107; } /* Warm star color */
+
+
+/* --- ANIMATIONS --- */
+
+/* Keyframes for a gentle up-and-down float */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Apply the floating animation to the header icons */
+.float-animation {
+    display: inline-block;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Add a delay to the second icon for a 'waving' effect */
+.delay-2 {
+    animation-delay: 1s;
+}
+
+/* New keyframes for a quick "pop" effect */
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); box-shadow: 0 0 15px rgba(60, 140, 180, 0.6); }
+    100% { transform: scale(1); }
+}
+
+/* This class will be added by JavaScript on click/tap */
+.btn-primary.pop {
+    animation: pop 0.3s ease-out; /* 0.3 seconds is fast and noticeable */
+}
+
+/* Keep the visual changes for the button to look nice */
+.btn-primary {
+    /* Keep your existing styles */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
