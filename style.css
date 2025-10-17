@@ -40,7 +40,7 @@ h1 {
 .arabic-text {
     font-family: 'Noto Naskh Arabic', serif; /* Or 'Harmattan' */
     color: #3C8CB4; /* Darker Blue */
-    font-size: 1.5em; /* Adjust as needed */
+    font-size: 2em; /* Adjust as needed */
 }
 
 .form-label {
@@ -76,7 +76,7 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Make icons match your header color */
-.blue-icon { color: #3C8CB4; }
+.blue-icon { color: #3C8CB4;}
 .yellow-icon { color: #ffc107; } /* Warm star color */
 
 
@@ -85,14 +85,14 @@ input::placeholder, textarea::placeholder {
 /* Keyframes for a gentle up-and-down float */
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
 /* Apply the floating animation to the header icons */
 .float-animation {
     display: inline-block;
-    animation: float 4s ease-in-out infinite;
+    animation: float 1.5s ease-in-out infinite;
 }
 
 /* Add a delay to the second icon for a 'waving' effect */
